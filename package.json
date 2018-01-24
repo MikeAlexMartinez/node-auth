@@ -9,8 +9,10 @@
     "connect-mongo": "^2.0.1",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
+    "helmet": "^3.10.0",
     "mongoose": "^4.9.8",
-    "nodemon": "^1.14.11"
+    "nodemon": "^1.14.11",
+    "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {},
   "scripts": {

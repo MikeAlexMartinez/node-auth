@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title Node Authentication
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
+
+    link(href='/css/style.css' rel='stylesheet' type='text/css' media='all')
+
+  body
+    h1 Node Application Authentication
+    div.main
+
+      //-signin-form
+      div.w3
+        div.signin-form.profile
+          h3 Login
+          div.login-form
+            form(action='/' method='post')
+              input(type='text' name='logemail' placeholder='E-mail' required)
+              input(type='password' name='logpassword' placeholder='Password' required)
+              div.tp
+                input(type='submit' value='Login')
+      
+      //-registration form
+      div.agile
+        div.signin-form.profile
+          h3 Register
+
+          div.login-form
+            form(action='/' method='post')
+              input(type='text' name='email' placeholder='E-mail' required)
+              input(type='text' name='username' placeholder='Username' required)
+              input(type='password' name='password' placeholder='Password' required)
+              input(type='password' name='passwordConf' placeholder='Confirm Password' required)
+              
+              div.tp
+                input(type='submit' value='Register')
+          p
+            a(href='#') By clicking register, I agree to your terms
+      div.clear

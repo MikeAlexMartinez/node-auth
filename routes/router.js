@@ -7,13 +7,8 @@ const router = express.Router();
 
 const User = require('../models/users');
 
-router.get('/', isLoggedIn, (req, res, next) => {
-  
-});
-
-router.get('/home', (req, res) => {
-  console.log('/home');
-  return res.sendFile(path.resolve(__dirname, '../public', 'index.html'));
+router.get(/^\/(home)?$/, (req, res) => {
+  res.render('home',{});
 });
 
 router.post('/',(req, res, next) => {
@@ -117,7 +112,7 @@ function isLoggedIn(req, res, next) {
   console.log("isLoggedIn");
   
   // check for req.session.userId
-  
+
 
     //check if valid user id
     User.findById(req.session.userId)

@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
+const helmet = require('helmet');
 
 const secret = process.env.SECRET || 'work hard';
 
@@ -23,6 +24,14 @@ db.once('open', function () {
   // we're connected!
   console.log("Connected to DB!");
 });
+
+// Initialize helmet
+app.use(helmet());
+
+// tell express where templates are kept.
+app.set('views', './views');
+// set template engine to pug
+app.set('view engine', 'pug');
 
 // Use sessions for tracking logins
 app.use(session({
