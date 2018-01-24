@@ -1,0 +1,33 @@
+{
+  "name": "node-auth",
+  "version": "1.0.0",
+  "description": "run through node authentication from blog post",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.1",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.1",
+    "nodemon": "^1.14.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeAlexMartinez/node-auth.git"
+  },
+  "keywords": [
+    "node",
+    "authentication"
+  ],
+  "author": "Michael Martinez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MikeAlexMartinez/node-auth/issues"
+  },
+  "homepage": "https://github.com/MikeAlexMartinez/node-auth#readme"
+}
