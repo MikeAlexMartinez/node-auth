@@ -3,6 +3,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
@@ -27,6 +28,9 @@ db.once('open', function () {
 
 // Initialize helmet
 app.use(helmet());
+
+// Cookie parsing
+app.use(cookieParser(secret, {}));
 
 // tell express where templates are kept.
 app.set('views', './views');
